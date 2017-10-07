@@ -73,7 +73,12 @@
     <ClInclude Include="NodoCola.h" />
     <ClInclude Include="NodoLD.h" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClInclude Include="ReporteHTML.h" />
+=======
+    <ClInclude Include="NodoPila.h" />
+    <ClInclude Include="Pila.h" />
+>>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
 =======
     <ClInclude Include="NodoPila.h" />
     <ClInclude Include="Pila.h" />
@@ -91,7 +96,12 @@
     <ClCompile Include="NodoCola.cpp" />
     <ClCompile Include="NodoLD.cpp" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClCompile Include="ReporteHTML.cpp" />
+=======
+    <ClCompile Include="NodoPila.cpp" />
+    <ClCompile Include="Pila.cpp" />
+>>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
 =======
     <ClCompile Include="NodoPila.cpp" />
     <ClCompile Include="Pila.cpp" />

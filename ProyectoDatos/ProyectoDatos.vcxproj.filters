@@ -43,12 +43,18 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClInclude Include="ReporteHTML.h">
 =======
+=======
+>>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
     <ClInclude Include="Pila.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="NodoPila.h">
+<<<<<<< HEAD
+>>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
+=======
 >>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -85,12 +91,18 @@
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClCompile Include="ReporteHTML.cpp">
 =======
+=======
+>>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
     <ClCompile Include="Pila.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
     <ClCompile Include="NodoPila.cpp">
+<<<<<<< HEAD
+>>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
+=======
 >>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
