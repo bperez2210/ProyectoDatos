@@ -3,8 +3,15 @@
 #include<stdlib.h> 
 #include<time.h>
 #include<list>
+#include <vector>
+#include <random>
 #include"Jugador.h"
 #include"Interfaz.h"
+<<<<<<< HEAD
+#include"ReporteHTML.h"
+=======
+#include "Pila.h"
+>>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
 
 class Control
 {
@@ -13,7 +20,13 @@ public:
 	~Control(void);
 	void inicioJuego();
 	void muestraDatos();
+	void llenaPila();
 private:
 	std::list<Jugador*> jugadores;
+<<<<<<< HEAD
+	ReporteHTML* html;
+=======
+	Pila *p1;
+>>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
 };
 

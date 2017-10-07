@@ -72,6 +72,12 @@
     <ClInclude Include="ListaLD.h" />
     <ClInclude Include="NodoCola.h" />
     <ClInclude Include="NodoLD.h" />
+<<<<<<< HEAD
+    <ClInclude Include="ReporteHTML.h" />
+=======
+    <ClInclude Include="NodoPila.h" />
+    <ClInclude Include="Pila.h" />
+>>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
     <ClInclude Include="Tablero.h" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +90,12 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NodoCola.cpp" />
     <ClCompile Include="NodoLD.cpp" />
+<<<<<<< HEAD
+    <ClCompile Include="ReporteHTML.cpp" />
+=======
+    <ClCompile Include="NodoPila.cpp" />
+    <ClCompile Include="Pila.cpp" />
+>>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
     <ClCompile Include="Tablero.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

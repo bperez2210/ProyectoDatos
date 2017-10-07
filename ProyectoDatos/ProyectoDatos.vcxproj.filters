@@ -42,6 +42,16 @@
     <ClInclude Include="NodoCola.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+<<<<<<< HEAD
+    <ClInclude Include="ReporteHTML.h">
+=======
+    <ClInclude Include="Pila.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoPila.h">
+>>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Control.cpp">
@@ -72,6 +82,16 @@
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
     <ClCompile Include="NodoCola.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+<<<<<<< HEAD
+    <ClCompile Include="ReporteHTML.cpp">
+=======
+    <ClCompile Include="Pila.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="NodoPila.cpp">
+>>>>>>> 01a3786aec8c46c3b3278ccbb22500e310dc6fdf
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
   </ItemGroup>
