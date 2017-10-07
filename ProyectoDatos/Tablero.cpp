@@ -3,15 +3,34 @@
 
 Tablero::Tablero(void){
 	primero=NULL;
+	generaColumnas();
 }
 
 Tablero::~Tablero(void){
 }
 
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+
 void Tablero::insertar(NodoLD *columna){
 	if(!primero){primero = columna;}
 	else{anidaNodos(columna);}
 }
+
+void Tablero::anidaNodos(NodoLD* nuevoppio){
+	NodoLD *aux1 = primero;
+	NodoLD *aux2 = nuevoppio;
+	while(aux1->der){aux1 = aux1->der;}
+	while(aux1){
+		aux1->der = aux2;
+		aux2->izq = aux1;
+		aux1 = aux1->abajo;
+		aux2 = aux2->abajo;
+	}
+}
+
+//-----------------------------------------------------------
+//-----------------------------------------------------------
 
 string Tablero::imprimeFil(NodoLD *fil){
 	stringstream s;
@@ -38,6 +57,9 @@ string Tablero::toString(){
 	return s.str();
 }
 
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+
 int Tablero::valorFicha(int columna){
 	if(columna == 0) return rand()% 15 + 1;
 	if(columna == 1) return rand()% 16 + 15;
@@ -56,14 +78,25 @@ char Tablero::valorColumna(int numColum){ //cambiar por los rangos dentro de los
 	return 'E';
 }
 
-void Tablero::anidaNodos(NodoLD* nuevoppio){
-	NodoLD *aux1 = primero;
-	NodoLD *aux2 = nuevoppio;
-	while(aux1->der){aux1 = aux1->der;}
-	while(aux1){
-		aux1->der = aux2;
-		aux2->izq = aux1;
-		aux1 = aux1->abajo;
-		aux2 = aux2->abajo;
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+
+
+void Tablero::generaFichasColumnas(ListaLD* listaAux, int numCol){
+	Ficha* fichaAux;
+	int valorFichaAux;
+	for(int i=0;i<5;i++){
+		valorFichaAux = valorFicha(numCol);
+		fichaAux = new Ficha(valorFichaAux);
+		listaAux->ingresar(fichaAux);
+	}
+}
+
+void Tablero::generaColumnas(){
+	ListaLD *listaAux;
+	for(int i=0;i<5;i++){
+		listaAux = new ListaLD();
+		generaFichasColumnas(listaAux,i);
+		insertar(listaAux->getPrimero());
 	}
 }

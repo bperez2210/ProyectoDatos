@@ -1,8 +1,12 @@
 #pragma once
+using namespace std;
+#include<iostream>
+
 class Interfaz
 {
 public:
-	Interfaz(void);
-	~Interfaz(void);
+	static int solicitaJugadores();
+	static int solicitaCartones();
+	static int solicitaTipoJuego();
 };
 

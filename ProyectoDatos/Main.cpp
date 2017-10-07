@@ -3,7 +3,7 @@ using namespace std;
 #include"Control.h"
 
 int main(){
-	srand(time(NULL));
+	srand (time(NULL));
 	Control control;
 	system("pause");
 	return 0;

@@ -1,5 +1,6 @@
 #pragma once
 #include"NodoLD.h"
+#include"ListaLD.h"
 #include<cstdlib>
 #include <stdlib.h> 
 #include <time.h>
@@ -14,6 +15,8 @@ public:
 	static int valorFicha(int);
 	static char valorColumna(int);
 	void anidaNodos(NodoLD*);
+	void generaFichasColumnas(ListaLD*,int);
+	void generaColumnas();
 	string toString();
 private:
 	NodoLD* primero;

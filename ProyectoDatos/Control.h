@@ -1,18 +1,19 @@
 #pragma once
-#include"Tablero.h"
-#include"ListaLD.h"
 #include<cstdlib>
-#include <stdlib.h> 
-#include <time.h>
+#include<stdlib.h> 
+#include<time.h>
+#include<list>
+#include"Jugador.h"
+#include"Interfaz.h"
 
 class Control
 {
 public:
 	Control(void);
 	~Control(void);
-	void generaFichasColumnas(ListaLD*,int);
-	void generaColumnas();
+	void inicioJuego();
+	void muestraDatos();
 private:
-	Tablero* tablero;
+	std::list<Jugador*> jugadores;
 };
 

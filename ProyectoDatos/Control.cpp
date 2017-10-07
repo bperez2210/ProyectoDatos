@@ -1,31 +1,25 @@
 #include "Control.h"
 
-
 Control::Control(void){
-	tablero=new Tablero();
-	generaColumnas();
+	inicioJuego();
+	muestraDatos();
 }
 
 Control::~Control(void){
 }
 
-void Control::generaFichasColumnas(ListaLD* listaAux,int numCol){
-	Ficha* fichaAux;
-	int valorFichaAux;
-	for(int i=0;i<5;i++){
-		valorFichaAux =  Tablero::valorFicha(numCol);
-		fichaAux = new Ficha(valorFichaAux);
-		listaAux->ingresar(fichaAux);
+void Control::inicioJuego(){
+	int cantUsuarios = Interfaz::solicitaJugadores();
+	int cantCartones = Interfaz::solicitaCartones();
+	for(int i=1;i<=cantUsuarios;i++){
+		jugadores.push_back(new Jugador(i,cantCartones));
 	}
 }
 
-void Control::generaColumnas(){
-	ListaLD *listaAux;
-	for(int i=0;i<5;i++){
-		listaAux = new ListaLD();
-		generaFichasColumnas(listaAux,i);
-		tablero->insertar(listaAux->getPrimero());
+void Control::muestraDatos(){
+	for(auto it=jugadores.begin();it!=jugadores.end();it++){
+		cout<<(*it)->toString();
 	}
-	cout<<tablero->toString();
 }
+
 

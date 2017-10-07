@@ -11,6 +11,7 @@ NodoLD::NodoLD(Ficha* ficha){
 }
 NodoLD::~NodoLD(void){
 }
+
 void NodoLD::setFicha(Ficha* ficha){
 	this->ficha=ficha;
 }
