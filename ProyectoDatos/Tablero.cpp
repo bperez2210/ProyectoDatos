@@ -83,12 +83,19 @@ char Tablero::valorColumna(int numColum){ //cambiar por los rangos dentro de los
 
 
 void Tablero::generaFichasColumnas(ListaLD* listaAux, int numCol){
+	std::set<int> v1;
 	Ficha* fichaAux;
 	int valorFichaAux;
+	bool boolean=false;
+	std::pair<set<int>::iterator,bool>p1;
 	for(int i=0;i<5;i++){
-		valorFichaAux = valorFicha(numCol);
-		fichaAux = new Ficha(valorFichaAux);
-		listaAux->ingresar(fichaAux);
+		do{
+			valorFichaAux = valorFicha(numCol);
+			p1=v1.insert(valorFichaAux);
+			boolean=p1.second;
+		}while(!boolean);
+	fichaAux = new Ficha(valorFichaAux);
+	listaAux->ingresar(fichaAux);
 	}
 }
 
