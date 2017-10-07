@@ -4,6 +4,9 @@
 #include<cstdlib>
 #include <stdlib.h> 
 #include <time.h>
+#include <set>
+#include <iostream>
+using namespace std;
 
 class Tablero
 {
