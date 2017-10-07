@@ -12,5 +12,6 @@ public:
 private:
 	NodoCola* primero;
 	NodoCola* ultimo;
+	NodoCola*vivalasele;
 };
 
