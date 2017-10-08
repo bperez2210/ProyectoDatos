@@ -37,3 +37,13 @@ string ColaTab::toString(){
 	}
 	return s.str();
 }
+
+string ColaTab::reporte(){
+	stringstream s;
+	NodoCola* aux=primero;
+	while(aux){
+		s<<aux->getTablero()->reporteTablero()<<endl;
+		aux=aux->sig;
+	}
+	return s.str();
+}

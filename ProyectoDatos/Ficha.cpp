@@ -29,6 +29,7 @@ string Ficha::toString(){
 	s<<" ";
 	return s.str();
 }
+
 bool Ficha::operator==(bool eliminado){
 	return (eliminado)? (estado) : (!estado);
 }

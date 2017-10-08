@@ -9,6 +9,7 @@
 #include"Pila.h"
 #include <vector>
 #include <random>
+#include <windows.h>
 
 class Control
 {

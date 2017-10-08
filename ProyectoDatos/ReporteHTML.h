@@ -12,10 +12,12 @@ public:
 	~ReporteHTML();
 	void iniciaHTML();
 	void setParametros(int cantUsuarios,int cantCartones,int tipoJuego);
-	void actualizaHTML(string cartJugador);
+	void actualizaHTML(int numJugador,string cartJugador);
 	void actualizaHTML(string cartonesJugador,string infoGanador);
 	void finalizaHTML();
 private:
+	int ronda;
+	int canCartones;
 	ofstream html;
 	stringstream paramIniciales;
 	stringstream cartonesJugador;

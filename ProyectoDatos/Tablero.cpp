@@ -62,6 +62,31 @@ string Tablero::toString(){
 	return s.str();
 }
 
+string Tablero::reporteFil(NodoLD* fil){
+	stringstream s;
+	while(fil){
+		s<<"<td>"<<fil->getFicha()->toString()<<"</td>"<<endl;
+		fil = fil->der;
+	}
+	return s.str();
+}
+string Tablero::reporteTablero(){
+	stringstream s;
+	NodoLD* aux = primero;
+	s<<"<table>"<<endl;
+	s<<"<thead>"<<endl;
+	s<<"<th>B</th>"<<"<th>I</th>"<<"<th>N</th>"<<"<th>G</th>"<<"<th>O</th>"<<endl;
+	s<<"</thead>"<<endl;
+	for(int i=0;aux;i++){
+		s<<"<tr>"<<endl;
+		s<<reporteFil(aux);
+		s<<"</tr>"<<endl;
+		aux = aux->abajo;
+	}
+	s<<"</table>"<<endl;
+	return s.str();
+}
+
 //-----------------------------------------------------------
 //-----------------------------------------------------------
 

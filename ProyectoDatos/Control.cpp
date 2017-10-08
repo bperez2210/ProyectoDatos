@@ -36,14 +36,15 @@ void Control::inicioJuego(){
 	html->setParametros(cantUsuarios,cantCartones,1);
 }
 
-void Control::muestraDatos(){
+void Control::muestraDatos(){ //LLAMAR ESTE METODO PARA CADA RONDA++
 	string info;
-	for(auto it=jugadores.begin();it!=jugadores.end();it++){
-		info += (*it)->toString();
-		cout<<info<<endl;
-		html->actualizaHTML(info);
+	int numJugador=1;
+	for(auto it=jugadores.begin();it!=jugadores.end();it++,numJugador++){
+		cout<<(*it)->toString();
+		html->actualizaHTML(numJugador,(*it)->reporte());
 	}
 	html->finalizaHTML();
+	ShellExecute(NULL,"open","ReporteBINGO.html",NULL, NULL,SW_SHOWNORMAL);
 }
 
 

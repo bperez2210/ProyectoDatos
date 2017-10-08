@@ -6,7 +6,15 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Bingo-Estructuras</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+			p{padding: 0;margin:0; margin-left: 50px;}
+        	th, td {border: 2px solid black;width: 25px;text-align: center;}
+        	th{background: #99ccff;}
+        	td{background: white;}
+        	table {background: #d5d5c3;float: left;margin-left: 15px;}
+        	.contenedor{height: 170px}
+        </style>
     </head>

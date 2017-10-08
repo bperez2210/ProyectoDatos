@@ -20,3 +20,11 @@ string Jugador::toString(){
 	s<<tableros->toString();
 	return s.str();
 }
+
+string Jugador::reporte(){
+	stringstream s;
+	s<<"<div class='contenedor'>"<<endl;
+	s<<tableros->reporte();
+	s<<"</div>"<<endl;
+	return s.str();
+}

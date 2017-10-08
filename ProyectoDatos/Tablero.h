@@ -12,13 +12,15 @@ public:
 	Tablero(void);
 	~Tablero(void);
 	void insertar(NodoLD*);
-	string imprimeFil(NodoLD*);
 	static int valorFicha(int);
 	static char valorColumna(int);
 	void anidaNodos(NodoLD*);
 	void generaFichasColumnas(ListaLD*,int);
 	void generaColumnas();
+	string imprimeFil(NodoLD*);
 	string toString();
+	string reporteFil(NodoLD*);
+	string reporteTablero();
 private:
 	NodoLD* primero;
 };

@@ -6,6 +6,7 @@ public:
 	Jugador(int,int);
 	~Jugador(void);
 	string toString();
+	string reporte();
 private:
 	int numJugador;
 	int cantTableros;
