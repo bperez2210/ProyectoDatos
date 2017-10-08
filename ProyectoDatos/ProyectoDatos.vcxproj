@@ -72,6 +72,9 @@
     <ClInclude Include="ListaLD.h" />
     <ClInclude Include="NodoCola.h" />
     <ClInclude Include="NodoLD.h" />
+    <ClInclude Include="NodoPila.h" />
+    <ClInclude Include="Pila.h" />
+    <ClInclude Include="ReporteHTML.h" />
     <ClInclude Include="Tablero.h" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +87,9 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NodoCola.cpp" />
     <ClCompile Include="NodoLD.cpp" />
+    <ClCompile Include="NodoPila.cpp" />
+    <ClCompile Include="Pila.cpp" />
+    <ClCompile Include="ReporteHTML.cpp" />
     <ClCompile Include="Tablero.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

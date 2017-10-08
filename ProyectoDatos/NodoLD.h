@@ -8,6 +8,10 @@ public:
 	NodoLD* abajo;
 	NodoLD* izq;
 	NodoLD* der;
+	NodoLD* arribaIzq;
+	NodoLD* arribaDer;
+	NodoLD* abajoIzq;
+	NodoLD* abajoDer;
 	NodoLD();
 	NodoLD(Ficha*);
 	~NodoLD(void);

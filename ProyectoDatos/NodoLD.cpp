@@ -4,10 +4,12 @@
 NodoLD::NodoLD(){
 	ficha=NULL;
 	arriba = abajo = izq = der = NULL;
+	arribaIzq = arribaDer = abajoIzq = abajoDer = NULL;
 }
 NodoLD::NodoLD(Ficha* ficha){
 	this->ficha=ficha;
 	arriba = abajo = izq = der = NULL;
+	arribaIzq = arribaDer = abajoIzq = abajoDer = NULL;
 }
 NodoLD::~NodoLD(void){
 }

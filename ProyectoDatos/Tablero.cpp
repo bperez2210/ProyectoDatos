@@ -1,9 +1,10 @@
-#include "Tablero.h"
+ï»¿#include "Tablero.h"
 
 
 Tablero::Tablero(void){
 	primero=NULL;
 	generaColumnas();
+	NodoLD* aux1 = primero;
 }
 
 Tablero::~Tablero(void){
@@ -24,6 +25,10 @@ void Tablero::anidaNodos(NodoLD* nuevoppio){
 	while(aux1){
 		aux1->der = aux2;
 		aux2->izq = aux1;
+		aux1->arribaDer = aux2->arriba;
+		aux1->abajoDer = aux2->abajo;
+		aux2->arribaIzq = aux1->arriba;
+		aux2->abajoIzq = aux1->abajo;
 		aux1 = aux1->abajo;
 		aux2 = aux2->abajo;
 	}
@@ -35,25 +40,25 @@ void Tablero::anidaNodos(NodoLD* nuevoppio){
 string Tablero::imprimeFil(NodoLD *fil){
 	stringstream s;
 	while(fil){
-		s<<"º"<<fil->getFicha()->toString();
+		s<<"Âº"<<fil->getFicha()->toString();
 		fil = fil->der;
 	}
-	s<<"º"<<endl;
+	s<<"Âº"<<endl;
 	return s.str();
 };
 
 string Tablero::toString(){
 	NodoLD* aux = primero;
 	stringstream s;
-	s<<"ÉÍÍÍËÍÍÍËÍÍÍËÍÍÍËÍÍÍ»"<<endl;
-	s<<"º B º I º N º G º O º"<<endl;
-	s<<"ÌÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍ¹"<<endl;
+	s<<"Ã‰ÃÃÃÃ‹ÃÃÃÃ‹ÃÃÃÃ‹ÃÃÃÃ‹ÃÃÃÂ»"<<endl;
+	s<<"Âº B Âº I Âº N Âº G Âº O Âº"<<endl;
+	s<<"ÃŒÃÃÃÃŽÃÃÃÃŽÃÃÃÃŽÃÃÃÃŽÃÃÃÂ¹"<<endl;
 	for(int i=0;aux;i++){
 		s<<imprimeFil(aux);
-		if(i<4){s<<"ÌÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍ¹"<<endl;}
+		if(i<4){s<<"ÃŒÃÃÃÃŽÃÃÃÃŽÃÃÃÃŽÃÃÃÃŽÃÃÃÂ¹"<<endl;}
 		aux = aux->abajo;
 	}
-	s<<"ÈÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍ¼"<<endl;
+	s<<"ÃˆÃÃÃÃŠÃÃÃÃŠÃÃÃÃŠÃÃÃÃŠÃÃÃÂ¼"<<endl;
 	return s.str();
 }
 
@@ -83,12 +88,19 @@ char Tablero::valorColumna(int numColum){ //cambiar por los rangos dentro de los
 
 
 void Tablero::generaFichasColumnas(ListaLD* listaAux, int numCol){
+	std::set<int> v1;
 	Ficha* fichaAux;
 	int valorFichaAux;
+	bool boolean=false;
+	std::pair<set<int>::iterator,bool>p1;
 	for(int i=0;i<5;i++){
-		valorFichaAux = valorFicha(numCol);
-		fichaAux = new Ficha(valorFichaAux);
-		listaAux->ingresar(fichaAux);
+		do{
+			valorFichaAux = valorFicha(numCol);
+			p1=v1.insert(valorFichaAux);
+			boolean=p1.second;
+		}while(!boolean);
+	fichaAux = new Ficha(valorFichaAux);
+	listaAux->ingresar(fichaAux);
 	}
 }
 
@@ -100,3 +112,25 @@ void Tablero::generaColumnas(){
 		insertar(listaAux->getPrimero());
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

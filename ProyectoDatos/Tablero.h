@@ -2,8 +2,9 @@
 #include"NodoLD.h"
 #include"ListaLD.h"
 #include<cstdlib>
-#include <stdlib.h> 
-#include <time.h>
+#include<stdlib.h> 
+#include<time.h>
+#include<set>
 
 class Tablero
 {
